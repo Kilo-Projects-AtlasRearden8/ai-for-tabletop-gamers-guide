@@ -31,6 +31,7 @@ DOCS = [
     "docs/08-step-by-step-prompts.md",
     "docs/09-privacy-and-safety.md",
     "docs/10-faq.md",
+    "docs/11-board-games.md",
 ]
 
 SITE_PAGES = [
@@ -43,6 +44,7 @@ SITE_PAGES = [
     "site/session-prep.html",
     "site/printable-worksheets.html",
     "site/step-by-step-prompts.html",
+    "site/board-games.html",
     "site/privacy-and-safety.html",
     "site/faq.html",
     "site/worksheets/character-sheet.html",

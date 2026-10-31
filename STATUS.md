@@ -5,37 +5,43 @@
 A beginner manual and static website for using free AI with tabletop RPGs and
 board games, published by **Asdale Dynamics, LLC**.
 
-### Manual (`docs/`)
-Eleven Markdown documents:
+### Manual (`docs/`) — twelve documents
 
-1. `00-intro.md` — welcome, scope, what the guide does and does not do
-2. `01-getting-started.md` — picking a free AI tool, account setup, first chat,
+1. `00-intro.md` — Welcome, scope, what the guide does and does not do
+2. `01-getting-started.md` — Picking a free AI tool, account setup, first chat,
    first prompt, what to avoid
-3. `02-character-sheets.md` — story-first character creation prompts and tips
-4. `03-campaign-notes.md` — session summaries, organizing messy notes, privacy
-5. `04-npc-ideas.md` — one NPC and three-NPC brainstorming prompts
-6. `05-rule-clarifications.md` — explain/compare rule prompts, plus warnings
+3. `02-character-sheets.md` — Story-first character creation prompts and tips
+4. `03-campaign-notes.md` — Session summaries, organizing messy notes, privacy
+5. `04-npc-ideas.md` — One NPC and three-NPC brainstorming prompts
+6. `05-rule-clarifications.md` — Explain/compare rule prompts, plus warnings
    that AI is not a rulebook
-7. `06-session-prep.md` — session and encounter planning prompts, prep checklist
-8. `07-printable-worksheets.md` — the two worksheets and how to print them
-9. `08-step-by-step-prompts.md` — every prompt from the guide, copy-and-paste
-10. `09-privacy-and-safety.md` — privacy rules, education-only notice,
+7. `06-session-prep.md` — Session and encounter planning prompts, prep checklist
+8. `07-printable-worksheets.md` — The two worksheets and how to print them
+9. `08-step-by-step-prompts.md` — Every prompt from the guide, copy and paste
+10. `09-privacy-and-safety.md` — Privacy rules, education-only notice,
     copyright respect
-11. `10-faq.md` — frequently asked questions
+11. `10-faq.md` — Frequently asked questions
+12. `11-board-games.md` — Using AI with board games: rule explanations,
+    teaching new players, setup/teardown checklist, solo/variant ideas,
+    scorekeeping help
 
-### Static site (`site/`)
-Thirteen HTML pages mirroring the manual, shared `site/assets/style.css` and
-`site/assets/print.css`, plus printable worksheets:
+### Static site (`site/`) — fourteen HTML pages
 
-- `site/index.html` — home
-- `site/getting-started.html` … `site/faq.html` — one page per manual section
+Thirteen content pages mirroring the manual plus `site/board-games.html`,
+shared `site/assets/style.css` and `site/assets/print.css`, and two printable
+worksheets:
+
+- `site/index.html` — Home
+- `site/getting-started.html` … `site/board-games.html` — one page per section
 - `site/worksheets/character-sheet.html` — one-page fill-in character sheet
-- `site/worksheets/session-worksheet.html` — session prep + rule-questions sheet
+- `site/worksheets/session-worksheet.html` — session prep + rule questions sheet
+  (also usable for board games)
 
 ### Other files
 - `LICENSE` — MIT License, copyright line exactly
   `Copyright (c) 2026 Asdale Dynamics, LLC`
-- `README.md` — project overview with Asdale Dynamics, LLC credit
+- `README.md` — project overview with Asdale Dynamics, LLC credit and a full
+  table of contents
 - `verify.py` — verification script (see results below)
 
 ## How to run it
@@ -45,7 +51,7 @@ No install, no server, no account is needed to read the guide.
 1. Open `site/index.html` in any web browser, or read `docs/00-intro.md`.
 2. Worksheets: open `site/worksheets/character-sheet.html` or
    `site/worksheets/session-worksheet.html`, then print (Ctrl+P / Command+P).
-   Print styles hide navigation and color so they print cleanly on plain paper.
+   Print styles hide menus and colors so they print clearly on plain paper.
 
 To run the verification script:
 
@@ -57,13 +63,14 @@ python3 verify.py
 
 `python3 verify.py` — all checks pass:
 
-- 29 required files exist
+- 31 required files exist
 - `LICENSE` contains the exact line `Copyright (c) 2026 Asdale Dynamics, LLC`
 - `README.md` credits Asdale Dynamics, LLC
-- All 13 HTML files parse and every internal link resolves
+- All 14 HTML files parse and every internal link resolves
 - Each site page has a matching docs markdown file (or is the home page / a
   worksheet)
-- Secret scan of 29 files found no API keys, tokens, or private keys
+- Secret scan of 32 files found no API keys, tokens, or private keys
+- Total: 280 checks, 0 failures
 
 ## Known gaps
 
@@ -76,3 +83,5 @@ python3 verify.py
 - No game assets, stat blocks, monsters, or rules text included by design.
 - No remote repository, no GitHub Actions workflows, nothing pushed or
   published.
+- The guide is RPG-first with a smaller board games section; board game content
+  could be expanded further if desired.
