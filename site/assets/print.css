@@ -1,0 +1,52 @@
+/* Print styles for worksheets and pages */
+
+@page {
+  size: Letter;
+  margin: 18mm 16mm 18mm 16mm;
+}
+
+* {
+  background: transparent !important;
+  color: #000 !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+body {
+  font-size: 11.5pt;
+  line-height: 1.45;
+  background: #fff !important;
+}
+
+a { text-decoration: none; color: #000; }
+
+nav, header .site-tagline, .no-print, footer, .skip-link { display: none !important; }
+
+.site { max-width: none; padding: 0; margin: 0; }
+
+h1, h2, h3 { page-break-after: avoid; }
+h1 { font-size: 18pt; }
+h2 { font-size: 14pt; margin-top: 18pt; }
+p, li { orphans: 3; widows: 3; }
+
+.prompt, .card, .warn {
+  background: #f5f3ec !important;
+  border: 1px solid #999 !important;
+  border-radius: 0;
+  page-break-inside: avoid;
+}
+
+.prompt { border-left: 4px solid #444 !important; }
+
+code { background: #eee !important; color: #000; border: 1px solid #bbb; }
+pre { background: #f5f3ec !important; border: 1px solid #999; page-break-inside: avoid; }
+
+.page-break { page-break-before: always; }
+
+.print-note {
+  font-size: 9pt;
+  color: #555;
+  margin-top: 26pt;
+  border-top: 1px solid #999;
+  padding-top: 10pt;
+}
